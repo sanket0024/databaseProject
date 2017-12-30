@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1 mt-2">
+	<div class="row">
+		<h2>Welcome to Trainly.io!</h2>
+		<p>Welcome to Trainly.io, the CS5200 semester project by Eric, Prasad, Sanket and Wei. The website provides and interface for interacting with the database that we have created and popluated.</p>
+	</div>
+
+	<div class="row">
+		<h4>Premade users</h4>
+		<p>Here are some premade users that you can use to test functionality. If you click on a user's email, you will be signed in as that user. Alternatively, you can use their credentials <a href="/sign_in">here.</a></p>
+		<div class="col-md-8 p-0 outline-gray">
+			<div class="row m-0">
+				<div class="col-md-4">Email</div>
+				<div class="col-md-4">Role</div>
+				<div class="col-md-4">Password</div>
+			</div>
+			<div class="row table-alt m-0">
+				<div class="col-md-4"><a href="/switch_user/10001/">Georgi.10001@somemail.com</a></div>
+				<div class="col-md-4">Admin</div>
+				<div class="col-md-4">somepass</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-4"><a href="/switch_user/10013/">Eberhardt.10013@somemail.com</a></div>
+				<div class="col-md-4">Faculty</div>
+				<div class="col-md-4">somepass</div>
+			</div>
+			<div class="row table-alt m-0">
+				<div class="col-md-4"><a href="/switch_user/10021/">Ramzi.10021@somemail.com</a></div>
+				<div class="col-md-4">Student</div>
+				<div class="col-md-4">somepass</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<h4>Quick Links</h4>
+		<div class="col-md-8 p-0 outline-gray">
+			<div class="row m-0">
+				<div class="col-md-6 text-center p-0"><div class="underline">Tasks</div></div>
+				<div class="col-md-6 text-center p-0"><div class="underline">Reports</div></div>
+			</div>
+			<div class="row table-alt m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/sign_up" class="p-1">Register New User </a></div>
+				<div class="col-md-6 p-0"><a class="p-1" href="/courses">Materials Remaining Per Course</a>(Student)</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/admin" class="p-1">Authenticate Faculty/Admin </a>(Admin)</div>
+				<div class="col-md-6 p-0"><a class="p-1" href="/admin/report/">$$ Made by Each Course Creator</a>(Admin)</div>
+			</div>
+			<div class="row table-alt m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/courses" class="p-1">Categorized List of Student's Courses </a>(Student)</div>
+				<div class="col-md-6 p-0"><a class="p-1" href="/browse/topic/?topic=Database">Sort Courses by Topic</a>(Student)</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/course/CS1006/" class="p-1">Enroll in a Course </a>(Student)</div>
+				<div class="col-md-6 p-0"><a class="p-1" href="/browse/comp_percent/">Sort Courses by Completion Percent</a>(Student)</div>
+			</div>
+			<div class="row table-alt m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/course/CS1006/" class="p-1">See Ordered Course Materials </a>(Student)</div>
+				<div class="col-md-6 p-0"><a class="p-1" href="/faculty/">See Courses With Unanswered Questions</a>(Faculty)</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/course/CS1006/" class="p-1">Mark Material Complete </a>(Student)</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-6 p-0 border-right table-alt"><a href="/certification/CS1006" class="p-1">Certificate of Completion </a>(Student)</div>
+			</div>
+			<div class="row m-0">
+				<div class="col-md-6 p-0 border-right"><a href="/history/" class="p-1">Account History </a>(Student)</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+{% endblock %}

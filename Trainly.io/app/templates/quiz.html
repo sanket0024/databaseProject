@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1 mt-2">
+    <div class="row">
+        <h2>{{course_id}} Quiz</h2>
+    </div>
+    <div class='col-md-12'>
+        {% for question in questions %}
+        <div class="row">
+            <div class="h4 col-md-10 m-0 p-0">
+                {{question.number}}. {{question.text}}<p>&nbsp;</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

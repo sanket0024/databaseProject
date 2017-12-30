@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="col-md-10 col-md-offset-1">
+	<div class="row">
+		<h3> Earnings Report </h3>
+		<p> Shows an organized list of how much money has been made in courses created by faculty members. </p>
+	</div>
+	<div class="row">
+		<div class="col-md-6 p-0 outline-gray">
+			<div class="row underline m-0">
+				<div class="col-md-6">Creator Email</div>
+				<div class="col-md-6">Earnings</div>
+			</div>
+			{% for earning in earnings %}
+				<div class="row m-0 {% if loop.index0 is divisibleby 2 %}table-alt{% endif %}">
+					<div class="col-md-6">{{ earning.courseCreator }}</div>
+					<div class="col-md-6">${{ earning.courseEarnings }}</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+{% endblock %}
